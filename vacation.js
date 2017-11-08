@@ -47,3 +47,27 @@ function calculateDays() {
   }
 
 }
+var budgetClick = document.getElementById("enterBudget");
+budgetClick.onclick = calculateBudget;
+
+function calculateBudget() {
+  var spendingMoney = document.getElementById("tripBudget");
+  var tripBudget = spendingMoney.value;
+  var conversion = tripBudget * 1.45;
+  var moneyPerDay = conversion / 10;
+
+  var tripExchangeMsg = document.getElementById("tripExchangeMsg");
+  tripExchangeMsg.innerHTML = "you should have "+conversion+" NZD to spend.";
+
+  var dailyExchangeMsg = document.getElementById("dailyExchangeMsg");
+  dailyExchangeMsg.innerHTML = "you can spend $"+moneyPerDay+" NZD and that should last you the trip"
+
+  // daily item of 10 costs x in conversion
+  var smallItemMsg = document.getElementById("exchange10Msg");
+  smallItemMsg.innerHTML = "An item costing 10 dollars in US will be 14.5 NZD";
+
+  // big ticket item 500 cost x in conversion
+  var bigItemMsg = document.getElementById("exchange500Msg");
+  bigItemMsg.innerHTML = "An item costing 500 dollars in US will be 725 NZD";
+
+}
