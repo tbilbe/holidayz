@@ -2,10 +2,11 @@ html{
   height: 100%;
 }
 body{
-  background: url("images/Argentina-06.jpg");
+  background: url("images/image1.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   text-align: center;
+  backgrou
 }
 
 label{

@@ -71,3 +71,16 @@ function calculateBudget() {
   bigItemMsg.innerHTML = "An item costing 500 dollars in US will be 725 NZD";
 
 }
+
+var images = ["images/image1", "images/image2", "images/image3", "images/image4"];
+var currentImage = 3;
+
+setInterval(changeImage, 3000);
+
+function changeImage(){
+  currentImage = currentImage + 1;
+  if(currentImage > images.length - 1){
+      currentImage = 0;
+  }
+  document.body.style.backgroundImage = "url(" + images[currentImage] + ".jpg)";
+}
